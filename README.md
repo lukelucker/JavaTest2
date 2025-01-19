@@ -1,2 +1,2 @@
-Test numer 1 z Javy.
+Test numer 2 z Javy.
 Łukasz Grycko

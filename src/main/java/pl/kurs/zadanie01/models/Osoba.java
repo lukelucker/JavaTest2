@@ -21,11 +21,11 @@ public abstract class Osoba {
     public abstract double podajDochody();
 
     public static Osoba zwrocNajwiekszyDochodWsrodOsob(Osoba[] tablicaOsob) {
-        double najwyższaPensja = 0;
+        double najwyzszyDochod = 0;
         Osoba osobaPosiadajacaNajwiekszyDochod = null;
         for (int i = 0; i < tablicaOsob.length; i++) {
-            if (tablicaOsob[i] != null && tablicaOsob[i].podajDochody() > najwyższaPensja) {
-                najwyższaPensja = tablicaOsob[i].podajDochody();
+            if (tablicaOsob[i] != null && tablicaOsob[i].podajDochody() > najwyzszyDochod) {
+                najwyzszyDochod = tablicaOsob[i].podajDochody();
                 osobaPosiadajacaNajwiekszyDochod = tablicaOsob[i];
             }
         }

@@ -4,11 +4,12 @@ import java.util.Objects;
 
 public class Kolo extends Figura {
 
-    private int r;
+    private int d;
+    private int r = d / 2;
 
-    public Kolo(int r) {
+    public Kolo(int d) {
         super();
-        this.r = r;
+        this.d = d;
     }
 
     @Override
@@ -23,7 +24,15 @@ public class Kolo extends Figura {
 
     @Override
     public String konwertowanieNaStringa() {
-        return getClass().getSimpleName() + "," + super.id + "," + r;
+        return getClass().getSimpleName() + "," + super.id + "," + d;
+    }
+
+    public int getD() {
+        return d;
+    }
+
+    public void setD(int d) {
+        this.d = d;
     }
 
     public int getR() {
@@ -39,12 +48,12 @@ public class Kolo extends Figura {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Kolo kolo = (Kolo) o;
-        return r == kolo.r;
+        return d == kolo.d;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(r);
+        return Objects.hashCode(d);
     }
 
     @Override

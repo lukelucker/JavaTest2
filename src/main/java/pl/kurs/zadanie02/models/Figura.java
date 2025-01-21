@@ -23,9 +23,10 @@ public abstract class Figura {
         return kwadrat;
     }
 
-    public static Figura stworzKolo(int r) {
-        Kolo kolo = new Kolo(r);
+    public static Figura stworzKolo(int d) {
+        Kolo kolo = new Kolo(d);
         kolo.id = ++numerFigury;
+        kolo.setR(d / 2);
         return kolo;
     }
 
